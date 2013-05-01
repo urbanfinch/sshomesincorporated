@@ -52,7 +52,6 @@ section#home {
       
       div.top {
         @include clearfix;
-        height: 260px;
         margin-bottom: 20px;
         
         h2 {
@@ -68,6 +67,10 @@ section#home {
           float: left;
           width: 210px;
           padding: 20px;
+        }
+        
+        div.middle {
+          margin: 0px 20px;
         }
         
         div.right {
@@ -107,6 +110,10 @@ section#home {
           float: left;
           width: 210px;
           padding: 20px;
+        }
+        
+        div.middle {
+          margin: 0px 20px;
         }
         
         img {

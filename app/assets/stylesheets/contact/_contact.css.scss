@@ -22,38 +22,12 @@ section#contact {
     width: 565px;
     margin-left: 20px;
     
-    form {
-      div {
-        margin-bottom: 10px;
-      }
-      
-      input[type=text], input[type=email], input[type=phone], textarea {
-        width: 545px;
-        border: none;
-        outline: none;
-        background-color: $gray;
-        padding: 10px;
-        color: $blue;
-      }
-      
-      input[type=submit] {
-        float: right;
-        border: none;
-        outline: none;
-        padding: 10px 16px;
-        margin: 0px;
-        background-color: $blue;
-        color: $white;
-        font-size: 16px;
-        text-transform: uppercase;
-        font-family: 'BenchNine', sans-serif;
-        cursor: pointer;
-      }
-      
-      input[type=submit]:hover {
-        background-color: $gray;
-        color: $blue;
-      }
+    p {
+      margin-bottom: 20px;
+    }
+    
+    ul {
+      margin-bottom: 20px;
     }
   }
 }

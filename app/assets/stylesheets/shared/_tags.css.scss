@@ -1,5 +1,9 @@
 /* Tags */
 
+a {
+  color: $blue;
+}
+
 h1 {
   font-size: 22px;
   text-transform: uppercase;
@@ -40,4 +44,38 @@ img {
 
 p {
   line-height: 22px;
+}
+
+form {
+  div {
+    margin-bottom: 10px;
+  }
+  
+  input[type=text], input[type=email], input[type=tel], textarea {
+    width: 545px;
+    border: none;
+    outline: none;
+    background-color: $gray;
+    padding: 10px;
+    color: $blue;
+  }
+  
+  input[type=submit] {
+    float: right;
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    margin: 0px;
+    background-color: $blue;
+    color: $white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'BenchNine', sans-serif;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: $gray;
+    color: $blue;
+  }
 }

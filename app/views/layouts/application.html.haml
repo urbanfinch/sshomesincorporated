@@ -15,7 +15,7 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-  %body{:'data-page' => params[:page]}
+  %body{:'data-controller' => params[:controller]}
     .container
       %header
         .logo
@@ -28,11 +28,16 @@
             = link_to 'Portfolio', portfolio_path, :class => "#{'selected' if params[:controller] == 'portfolio'}"
             = link_to 'Links', links_path, :class => "#{'selected' if params[:controller] == 'links'}"
             = link_to 'Contact', contact_path, :class => "#{'selected' if params[:controller] == 'contact'}"
+      .flash
+        - if flash[:notice]
+          %p.notice= flash[:notice]
+        - if flash[:alert]
+          %p.alert= flash[:alert]
       = yield
     %footer
       .container
         .left
           %span &copy; 2013 S & S Homes, Inc.
         .right
-          %span Call Us Toll Free
-          %span 1-800-555-6666
+          %span Call Us
+          %span (402) 202-6527

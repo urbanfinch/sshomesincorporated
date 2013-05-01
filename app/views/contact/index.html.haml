@@ -1,28 +1,30 @@
 %section{:id => 'contact'}
   .left
     %h2 Contact Info
-    %img{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=Williamsburg,Brooklyn,NY&zoom=13&size=400x400&markers=color:blue%7Clabel:S%7C11211%7C11206%7C11222&sensor=false'}
+    %a{:href => 'http://maps.google.com/maps?q=2320+S.+48th+Street,+Lincoln,+Nebraska'}
+      %img{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=2320+S.+48th+Street,+Lincoln,+Nebraska&zoom=13&size=380x380&markers=2320+S.+48th+Street,+Lincoln,+Nebraska&sensor=false'}
     %p
-      %span.bold 8901 Marmora Road,
+      %a{:href => 'http://maps.google.com/maps?q=2320+S.+48th+Street,+Lincoln,+Nebraska'}
+        %span.bold 2320 S. 48th Street 
       %br
-      %span.bold Glasgow, D04 89GR.
+      %a{:href => 'http://maps.google.com/maps?q=2320+S.+48th+Street,+Lincoln,+Nebraska'}
+        %span.bold Lincoln, NE 68506
       %br
-      Phone: +1 800 559 6580
-      %br
-      FAX: +1 800 889 9898 
+      Phone: (402) 202-6527
       %br
       E-mail: 
-      %a{:href => 'mailto:mail@demolink.org'} mail@demolink.org
+      %a{:href => 'mailto:info@sshomesincorporated.com'} info@sshomesincorporated.com
   .right
     %h2 Get In Touch
-    %form{:id => 'contact', :action => '/contact', :method => 'post'}
+    = render :partial => 'shared/error', :locals => {:object => @contact}
+    = form_for :contact, :url => contact_path do |f|
       %div
-        %input{:id => 'contact_name', :name => 'contact[name]', :type => 'text', :placeholder => 'Name:', :required => true}
+        = f.text_field :name, :placeholder => 'Name:', :required => true
       %div
-        %input{:id => 'contact_email', :name => 'contact[email]', :type => 'email', :placeholder => 'Email:', :required => true}
+        = f.email_field :email, :placeholder => 'Email:', :required => true
       %div
-        %input{:id => 'contact_phone', :name => 'contact[phone]', :type => 'phone', :placeholder => 'Phone Number:'}
+        = f.phone_field :phone, :placeholder => 'Phone:', :required => true
       %div
-        %textarea{:id => 'contact_message', :name => 'contact[message]', :rows => 12, :placeholder => 'Message:', :required => true}
+        = f.text_area :message, :rows => 12, :placeholder => 'Message:', :required => true
       %div
-        %input{:id => 'contact_deliver', :name => 'contact[deliver]', :type => 'submit', :value => 'Send'}
+        = f.submit 'Send'

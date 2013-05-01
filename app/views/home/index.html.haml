@@ -1,16 +1,14 @@
 %section{:id => 'home'}
   .slideshow
     .slides
-      %img{:src => '/assets/slides/1.png', :alt => 'slide'}
-      %img{:src => '/assets/slides/2.png', :alt => 'slide'}
-      %img{:src => '/assets/slides/3.png', :alt => 'slide'}
-      %img{:src => '/assets/slides/4.png', :alt => 'slide'}
-      %img{:src => '/assets/slides/5.png', :alt => 'slide'}
+      - unless @album.nil?
+        - @album.images.each do |image|
+          %img{:src => image.image.url(:large), :alt => image.id}
     .tag
       %img{:src => '/assets/build_the_world.png', :alt => 'build_the_world'}
     .nav
-      %a{:href => '#prev'} Prev
-      %a{:href => '#next'} Next
+      %a{:href => '#prev', :class => 'prev'} <
+      %a{:href => '#next', :class => 'next'} >
   %h2.slogan We have a passion for creating new and unique spaces
   .container
     .sidebar
@@ -48,19 +46,19 @@
       .bottom
         .left
           %h2 Lorem
-          %img{:src => '/assets/', :alt => ''}
+          %img{:src => '/assets/missing/210_158.png', :alt => ''}
           %p
             Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.
             et magnis dis parturient montes, nascetur ridiculus mus.
         .middle
           %h2 Phasellus
-          %img{:src => '/assets/', :alt => ''}
+          %img{:src => '/assets/missing/210_158.png', :alt => ''}
           %p
             Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.
             et magnis dis parturient montes, nascetur ridiculus mus.
         .right
           %h2 Aenean
-          %img{:src => '/assets/', :alt => ''}
+          %img{:src => '/assets/missing/210_158.png', :alt => ''}
           %p
             Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.
             et magnis dis parturient montes, nascetur ridiculus mus.

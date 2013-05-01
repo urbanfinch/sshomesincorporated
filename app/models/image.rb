@@ -1,24 +1,19 @@
 class Image
-  include MongoMapper::Document
-  timestamps!
+  include Mongoid::Document
+  include Mongoid::Timestamps
+  include Mongoid::Paperclip
   
-  key :name,        String
-  key :description, String
-  key :image_file_name,     String
-  key :image_file_size,     String
-  key :image_content_type,  String
-  key :image_updated_at,    String
+  field :name,        :type => String
+  field :description, :type => String
   
-  #has_attached_file :image, :styles => { :large => "985x510", :thumb => "300x300" }
-  
-  validates_presence_of :name
-  
-  def thumb
-    {
-      :large => '',
-      :thumb => ''
+  has_mongoid_attached_file :image,
+    :default_url => '/assets/missing/:attachment/missing_:style.png',
+    :styles => {
+      :large       => ['985x510',   :png],
+      :thumb       => ['300x300',   :png]
     }
-  end
+    
+  validates_presence_of :name
   
   belongs_to :album
 end

@@ -7,8 +7,8 @@
           - album = @albums[j] unless @albums[j].nil?
           - if album
             .album
-              %a{:href => "/portfolio/#{album.id}"}
-                %img{:src => album.thumb[:thumb], :alt => album.name}
+              %a{:href => show_portfolio_path(album)}
+                %img{:src => album.thumb.url(:thumb), :alt => album.name}
               %h3
-                %a{:href => "/portfolio/#{album.id}"}= album.name
+                %a{:href => show_portfolio_path(album)}= album.name
               %p= album.description

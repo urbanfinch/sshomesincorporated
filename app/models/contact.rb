@@ -1,11 +1,13 @@
 class Contact
-  include MongoMapper::Document
-  timestamps!
+  include Mongoid::Document
+  include Mongoid::Timestamps
     
-  key :name,    String
-  key :email,   String
-  key :phone,   String
-  key :message, String
+  field :name,    :type => String
+  field :email,   :type => String
+  field :phone,   :type => String
+  field :message, :type => String
   
-  validates_presence_of :name
+  validates_presence_of     :name
+  validates_presence_of     :email
+  validates                 :email, :email => true
 end
