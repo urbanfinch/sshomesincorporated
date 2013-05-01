@@ -1,0 +1,28 @@
+%section{:id => 'contact'}
+  .left
+    %h2 Contact Info
+    %img{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=Williamsburg,Brooklyn,NY&zoom=13&size=400x400&markers=color:blue%7Clabel:S%7C11211%7C11206%7C11222&sensor=false'}
+    %p
+      %span.bold 8901 Marmora Road,
+      %br
+      %span.bold Glasgow, D04 89GR.
+      %br
+      Phone: +1 800 559 6580
+      %br
+      FAX: +1 800 889 9898 
+      %br
+      E-mail: 
+      %a{:href => 'mailto:mail@demolink.org'} mail@demolink.org
+  .right
+    %h2 Get In Touch
+    %form{:id => 'contact', :action => '/contact', :method => 'post'}
+      %div
+        %input{:id => 'contact_name', :name => 'contact[name]', :type => 'text', :placeholder => 'Name:', :required => true}
+      %div
+        %input{:id => 'contact_email', :name => 'contact[email]', :type => 'email', :placeholder => 'Email:', :required => true}
+      %div
+        %input{:id => 'contact_phone', :name => 'contact[phone]', :type => 'phone', :placeholder => 'Phone Number:'}
+      %div
+        %textarea{:id => 'contact_message', :name => 'contact[message]', :rows => 12, :placeholder => 'Message:', :required => true}
+      %div
+        %input{:id => 'contact_deliver', :name => 'contact[deliver]', :type => 'submit', :value => 'Send'}

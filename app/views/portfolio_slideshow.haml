@@ -1,0 +1,10 @@
+%section{:id => 'portfolio'}
+  %h2= @album.name
+  %p= @album.description
+  .slideshow
+    .slides
+      - @album.images.each do |image|
+        %img{:src => image.image[:large], :alt => image.image.file_name}
+    .nav
+      %a{:href => '#prev'} Prev
+      %a{:href => '#next'} Next

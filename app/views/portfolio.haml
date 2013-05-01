@@ -1,0 +1,14 @@
+%section{:id => 'portfolio'}
+  %h2 Our Projects Available In a Cost-Effective Package
+  - (0..@albums.count).each do |i|
+    - if i % 3 == 0
+      .row
+        - (i...(i + 3)).each do |j|
+          - album = @albums[j] unless @albums[j].nil?
+          - if album
+            .album
+              %a{:href => "/portfolio/#{album.id}"}
+                %img{:src => album.thumb[:thumb], :alt => album.name}
+              %h3
+                %a{:href => "/portfolio/#{album.id}"}= album.name
+              %p= album.description

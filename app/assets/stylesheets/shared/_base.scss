@@ -1,0 +1,224 @@
+/* Colors */
+$white: #FFFFFF;
+$black: #000000;
+$blue: #004071;
+$light-blue: #00AEEF;
+$gray: #E3E3E3;
+$pink: #FFD9D4;
+
+/* Fonts */
+
+@import url("http://fonts.googleapis.com/css?family=BenchNine");
+
+/* Tags */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $white;
+  color: $blue;
+  background-image: url('/images/background.png');
+  background-repeat: no-repeat;
+  background-size: auto 720px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+header {
+  height: 210px;
+  
+  div.logo {
+    width: 250px;
+    height: 210px;
+    float: left;
+    
+    h1 {
+      width: 250px;
+      height: 210px;
+      background-color: $blue;
+      background-image: url('/images/logo.png');
+      background-repeat: no-repeat;
+      background-position: 11px 0px;
+      
+      a {
+        display: block;
+        width: 250px;
+        height: 210px;
+        text-indent: -9999px;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  div.nav {
+    float: left;
+    width: 146px;
+    height: 158px;
+    padding: 26px 32px;
+    background-color: $light-blue;
+    
+    a {
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: 'BenchNine', sans-serif;
+      font-size: 28px;
+      line-height: 30px;
+      color: $blue;
+    }
+    
+    a:hover, a.selected {
+      color: $white;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  font-family: 'BenchNine', sans-serif;
+  text-transform: uppercase;
+  background-color: $blue;
+  color: $white;
+  
+  span {
+    display: block;
+    padding: 10px 0px;
+  }
+  
+  div.left {
+    float: left;
+    width: 50%;
+  }
+  
+  div.right {
+    float: left;
+    width: 50%;
+    text-align: right;
+    
+    span:first-child {
+      color: $gray;
+    }
+    
+    span:last-child {
+      font-size: 40px;
+      padding: 0px;
+    }
+  }
+}
+
+h1 {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: 'BenchNine', sans-serif;
+  color: $blue;
+}
+
+h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: 'BenchNine', sans-serif;
+  color: $blue;
+}
+
+h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'BenchNine', sans-serif;
+  color: $blue;
+}
+
+ul {
+  list-style-position: outside;
+  
+  li {
+    background-image: url('/images/indicator.png');
+    background-position: 0px 4px;
+    background-repeat: no-repeat;
+    line-height: 25px;
+    padding-left: 25px;
+  }
+}
+
+img {
+  padding: 10px;
+  background-color: $gray;
+}
+
+p {
+  line-height: 22px;
+}
+
+span.bold {
+  font-weight: bold;
+}
+
+div#flash {
+  height: 50px;
+  line-height: 50px;
+  padding: 0px 24px;
+  font-family: 'BenchNine', sans-serif;
+  background-color: $gray;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+div.slideshow {
+  position: relative;
+  width: 985px;
+  height: 510px;
+  
+  div.slides {
+    position: absolute;
+    width: 985px;
+    height: 510px;
+    
+    img {
+      display: none;
+      width: 985px;
+      height: 510px;
+      padding: 0px;
+    }
+    
+    img:first-child {
+      display: block;
+    }
+  }
+  
+  div.tag {
+    position: absolute;
+    top: 380px;
+  }
+  
+  div.nav {
+    position: absolute;
+    top: 460px;
+    right: 26px;
+    width: 64px;
+    height: 30px;
+    
+    a {
+      display: block;
+      float: left;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      margin: 0px 1px;
+      font-size: 10px;
+      text-decoration: none;
+      text-align: center;
+      color: $white;
+      background-color: $blue;
+      font-family: 'BenchNine', sans-serif;
+    }
+  }
+}
+
+div.container {
+  width: 985px;
+  min-height: 100%;
+  margin: 0px auto;
+}
+  
