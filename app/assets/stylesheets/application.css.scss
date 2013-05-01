@@ -11,15 +11,15 @@
  */
 
 @import "bourbon";
+@import "shared/reset";
 @import "shared/fonts";
 @import "shared/colors";
 @import "shared/tags";
 @import "shared/elements";
 @import "layouts/application";
 
+@import "about/**/*";
+@import "contact/**/*";
 @import "home/**/*";
-//@import "customer/**/*";
-//@import "dashboard/**/*";
-//@import "inventory/**/*";
-//@import "purchase/**/*";
-//@import "sell/**/*";
+@import "links/**/*";
+@import "portfolio/**/*";

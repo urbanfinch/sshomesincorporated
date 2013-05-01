@@ -23,11 +23,11 @@
             %a{:href => '/'} S&S Homes, Inc.
         .nav
           %nav
-            %a{:href => '/home', :title => 'Home', :class => "#{'selected' if params[:page] == 'home'}"} Home
-            %a{:href => '/about', :title => 'About Us', :class => "#{'selected' if params[:page] == 'about'}"} About Us
-            %a{:href => '/portfolio', :title => 'Portfolio', :class => "#{'selected' if params[:page] == 'portfolio'}"} Portfolio
-            %a{:href => '/links', :title => 'Links', :class => "#{'selected' if params[:page] == 'links'}"} Links
-            %a{:href => '/contact', :title => 'Contact', :class => "#{'selected' if params[:page] == 'contact'}"} Contact
+            = link_to 'Home', home_path, :class => "#{'selected' if params[:controller] == 'home'}"
+            = link_to 'About', about_path, :class => "#{'selected' if params[:controller] == 'about'}"
+            = link_to 'Portfolio', portfolio_path, :class => "#{'selected' if params[:controller] == 'portfolio'}"
+            = link_to 'Links', links_path, :class => "#{'selected' if params[:controller] == 'links'}"
+            = link_to 'Contact', contact_path, :class => "#{'selected' if params[:controller] == 'contact'}"
       = yield
     %footer
       .container

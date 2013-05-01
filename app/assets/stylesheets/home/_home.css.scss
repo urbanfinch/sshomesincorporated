@@ -50,22 +50,6 @@ section#home {
       width: 790px;
       margin-left: 15px;
       
-      div.left {
-        float: left;
-        width: 250px;
-      }
-      
-      div.middle {
-        float: left;
-        width: 250px;
-        margin: 0px 20px;
-      }
-      
-      div.right {
-        float: left;
-        width: 250px;
-      }
-      
       div.top {
         @include clearfix;
         height: 260px;
@@ -81,6 +65,7 @@ section#home {
         }
         
         div.left, div.middle, div.right {
+          float: left;
           width: 210px;
           padding: 20px;
         }
@@ -119,11 +104,13 @@ section#home {
         }
         
         div.left, div.middle, div.right {
+          float: left;
           width: 210px;
           padding: 20px;
         }
         
         img {
+          display: block;
           width: 190px;
           height: 138px;
           background-color: $gray;
