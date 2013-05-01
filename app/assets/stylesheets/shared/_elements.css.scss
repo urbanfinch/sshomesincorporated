@@ -1,0 +1,72 @@
+/* Elements */
+
+span.bold {
+  font-weight: bold;
+}
+
+div#flash {
+  height: 50px;
+  line-height: 50px;
+  padding: 0px 24px;
+  font-family: 'BenchNine', sans-serif;
+  background-color: $gray;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+div.slideshow {
+  position: relative;
+  width: 985px;
+  height: 510px;
+  
+  div.slides {
+    position: absolute;
+    width: 985px;
+    height: 510px;
+    
+    img {
+      display: none;
+      width: 985px;
+      height: 510px;
+      padding: 0px;
+    }
+    
+    img:first-child {
+      display: block;
+    }
+  }
+  
+  div.tag {
+    position: absolute;
+    top: 380px;
+  }
+  
+  div.nav {
+    position: absolute;
+    top: 460px;
+    right: 26px;
+    width: 64px;
+    height: 30px;
+    
+    a {
+      display: block;
+      float: left;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      margin: 0px 1px;
+      font-size: 10px;
+      text-decoration: none;
+      text-align: center;
+      color: $white;
+      background-color: $blue;
+      font-family: 'BenchNine', sans-serif;
+    }
+  }
+}
+
+div.container {
+  width: 985px;
+  min-height: 100%;
+  margin: 0px auto;
+}

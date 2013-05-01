@@ -1,9 +1,38 @@
 !!!
 %html
   %head
-    %title Sshomesincorporated
+    %title S & S Homes, Inc.
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body
-    = yield
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-9687987-21']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+  %body{:'data-page' => params[:page]}
+    .container
+      %header
+        .logo
+          %h1
+            %a{:href => '/'} S&S Homes, Inc.
+        .nav
+          %nav
+            %a{:href => '/home', :title => 'Home', :class => "#{'selected' if params[:page] == 'home'}"} Home
+            %a{:href => '/about', :title => 'About Us', :class => "#{'selected' if params[:page] == 'about'}"} About Us
+            %a{:href => '/portfolio', :title => 'Portfolio', :class => "#{'selected' if params[:page] == 'portfolio'}"} Portfolio
+            %a{:href => '/links', :title => 'Links', :class => "#{'selected' if params[:page] == 'links'}"} Links
+            %a{:href => '/contact', :title => 'Contact', :class => "#{'selected' if params[:page] == 'contact'}"} Contact
+      = yield
+    %footer
+      .container
+        .left
+          %span &copy; 2013 S & S Homes, Inc.
+        .right
+          %span Call Us Toll Free
+          %span 1-800-555-6666

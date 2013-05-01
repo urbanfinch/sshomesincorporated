@@ -14,11 +14,10 @@
 @import "shared/fonts";
 @import "shared/colors";
 @import "shared/tags";
-@import "shared/forms";
 @import "shared/elements";
 @import "layouts/application";
 
-//@import "account/**/*";
+@import "home/**/*";
 //@import "customer/**/*";
 //@import "dashboard/**/*";
 //@import "inventory/**/*";

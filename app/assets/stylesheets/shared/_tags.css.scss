@@ -1,0 +1,43 @@
+/* Tags */
+
+h1 {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: 'BenchNine', sans-serif;
+  color: $blue;
+}
+
+h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: 'BenchNine', sans-serif;
+  color: $blue;
+}
+
+h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'BenchNine', sans-serif;
+  color: $blue;
+}
+
+ul {
+  list-style-position: outside;
+  
+  li {
+    background-image: url('/images/indicator.png');
+    background-position: 0px 4px;
+    background-repeat: no-repeat;
+    line-height: 25px;
+    padding-left: 25px;
+  }
+}
+
+img {
+  padding: 10px;
+  background-color: $gray;
+}
+
+p {
+  line-height: 22px;
+}

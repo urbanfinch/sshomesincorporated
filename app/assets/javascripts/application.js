@@ -13,3 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+if ($('body').data('page') != 'home') {      $('body').css('background-image', "url('/images/background_clipped.png')");      $('body').css('background-size', '120% 210px');    }

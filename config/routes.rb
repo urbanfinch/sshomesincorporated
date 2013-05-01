@@ -1,4 +1,10 @@
 Sshomesincorporated::Application.routes.draw do
+  
+  get 'home' => 'home#index'
+ 
+  root :to => 'home#index'
+  match '*path', :to => 'home#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
