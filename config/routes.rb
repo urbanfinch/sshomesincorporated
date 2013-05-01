@@ -1,6 +1,10 @@
 Sshomesincorporated::Application.routes.draw do
   
   get 'home' => 'home#index'
+  get 'about' => 'about#index'
+  get 'portfolio' => 'portfolio#index'
+  get 'links' => 'links#index'
+  get 'contact' => 'contact#index'
  
   root :to => 'home#index'
   match '*path', :to => 'home#index'
