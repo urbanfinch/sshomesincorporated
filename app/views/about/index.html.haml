@@ -1,21 +1,18 @@
 %section{:id => 'about'}
   .left
-    %h2 Our Advantages
-    %ol
-      - 3.times do |i|
-        %li
-          %p.indicator= i
-          %p.title
-            %span.bold Praesent vestibulum molestie lacus.
-          %p
-            Aenean Monummy hendrit mauris. Phasellus porta.
-    %hr
-    %h2 Our Principles
-    %ul
-      %li Praesent vestibulum molestie lacus
-      %li Aenean nonummy  hendrerit mauris
-      %li parturient montes, nascetur ridiculus mus
-      %li Phasellus porta
+    - unless @sidebar_top_list.nil?
+      %h2= @sidebar_top_list.title
+      %ol
+        - @sidebar_top_list.bullets.asc(:index).each_with_index do |bullet, index|
+          %li
+            %p.indicator= index
+            %p= bullet.content
+    - unless @sidebar_bottom_list.nil?
+      %hr
+      %h2= @sidebar_bottom_list.title
+      %ul
+        - @sidebar_bottom_list.bullets.asc(:index).each do |bullet|
+          %li= bullet.content
   .right
     - unless @right_blurb.nil?
       %h2= @right_blurb.title

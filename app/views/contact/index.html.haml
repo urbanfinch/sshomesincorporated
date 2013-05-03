@@ -1,11 +1,12 @@
 %section{:id => 'contact'}
   .left
     %h2 Contact Info
-    %a{:href => 'http://maps.google.com/maps?q=2320+S.+48th+Street,+Lincoln,+Nebraska'}
-      %img{:src => 'http://maps.googleapis.com/maps/api/staticmap?center=2320+S.+48th+Street,+Lincoln,+Nebraska&zoom=13&size=380x380&markers=2320+S.+48th+Street,+Lincoln,+Nebraska&sensor=false'}
+    - unless @map.nil?
+      %a{:href => URI::escape("http://maps.google.com/maps?q=#{@map.center}")}
+        %img{:src => URI::escape("http://maps.googleapis.com/maps/api/staticmap?center=#{@map.center}&zoom=#{@map.zoom}&size=380x380&markers=#{@map.center}&sensor=false")}
     %p
       %a{:href => 'http://maps.google.com/maps?q=2320+S.+48th+Street,+Lincoln,+Nebraska'}
-        %span.bold 2320 S. 48th Street 
+        %span.bold 2320 S. 48th Street
       %br
       %a{:href => 'http://maps.google.com/maps?q=2320+S.+48th+Street,+Lincoln,+Nebraska'}
         %span.bold Lincoln, NE 68506

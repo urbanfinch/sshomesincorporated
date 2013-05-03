@@ -2,6 +2,7 @@ class ContactController < ApplicationController
   
   def index
     @contact = Contact.new
+    @map = Map.where(:identifier => 'contact').first
     
     respond_to do |format|
       format.html

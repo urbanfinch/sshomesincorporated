@@ -3,9 +3,10 @@ class Employee
   include Mongoid::Timestamps
   include Mongoid::Paperclip
   
-  field :name,                :type => String
-  field :email,               :type => String
   field :description,         :type => String
+  field :email,               :type => String
+  field :phone,               :type => String
+  field :name,                :type => String
   
   has_mongoid_attached_file :image,
     :default_url => '/assets/missing/:attachment/missing_:style.png',

@@ -8,6 +8,7 @@ class HomeController < ApplicationController
     @bottom_left_blurb = Blurb.where(:identifier => 'home_bottom_left').first
     @bottom_middle_blurb = Blurb.where(:identifier => 'home_bottom_middle').first
     @bottom_right_blurb = Blurb.where(:identifier => 'home_bottom_right').first
+    @top_middle_list = List.where(:identifier => 'home_top_middle').first
     
     respond_to do |format|
       format.html

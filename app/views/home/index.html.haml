@@ -25,12 +25,11 @@
             %h3= @top_left_blurb.subtitle
             %p= @top_left_blurb.content
         .middle
-          %h2 Capabilities
-          %ul
-            %li Praesent vestibulum molestie lacus
-            %li Aenean nonummy  hendrerit mauris
-            %li parturient montes, nascetur ridiculus mus
-            %li Phasellus porta
+          - unless @top_middle_list.nil?
+            %h2= @top_middle_list.title
+            %ul
+              - @top_middle_list.bullets.asc(:index).each do |bullet|
+                %li= bullet.content
         - unless @post.nil?
           .right
             %h3.date
