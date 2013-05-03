@@ -75,25 +75,54 @@ section#home {
         
         div.right {
           background-color: $gray;
-          height: 220px;
           
-          h3.date {
-            float: left;
-            width: 60px;
-            height: 60px;
-            margin-right: 20px;
-            background-color: $light-blue;
-            color: $white;
-            text-align: center;
+          div.post {
+            display: none;
+            margin-bottom: 10px;
             
-            span.day {
-              display: block;
-              font-size: 32px;
-              padding-top: 4px;
+            h3.date {
+              float: left;
+              width: 60px;
+              height: 60px;
+              margin-right: 20px;
+              background-color: $light-blue;
+              color: $white;
+              text-align: center;
+            
+              span.day {
+                display: block;
+                font-size: 32px;
+                padding-top: 4px;
+              }
+            
+              span.month {
+                display: block;
+              }
             }
-            
-            span.month {
+          }
+          
+          div.post:first-child {
+            display: block;
+          }
+          
+          div.nav {
+            float: right;
+            width: 64px;
+            height: 30px;
+    
+            a {
               display: block;
+              float: left;
+              width: 30px;
+              height: 30px;
+              line-height: 30px;
+              margin: 0px 1px;
+              font-size: 14px;
+              text-decoration: none;
+              text-align: center;
+              color: $white;
+              background-color: $blue;
+              font-family: 'BenchNine', sans-serif;
             }
           }
         }

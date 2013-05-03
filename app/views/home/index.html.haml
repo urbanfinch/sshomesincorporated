@@ -30,13 +30,18 @@
             %ul
               - @top_middle_list.bullets.asc(:index).each do |bullet|
                 %li= bullet.content
-        - unless @post.nil?
-          .right
-            %h3.date
-              %span.day= @post.created_at.day
-              %span.month= @post.created_at.strftime("%b")
-            %h3= @post.title
-            %p= @post.content
+        .right
+          .posts
+            - @posts.each do |post|
+              .post
+                %h3.date
+                  %span.day= post.created_at.day
+                  %span.month= post.created_at.strftime("%b")
+                %h3= post.title
+                %p= post.content
+            .nav
+              %a{:href => '#prev', :class => 'prev'} <
+              %a{:href => '#next', :class => 'next'} >
       .bottom
         .left
           - unless @bottom_left_blurb.nil?

@@ -11,8 +11,11 @@ window.SSHomes ?=
     if $('.slideshow').length
       SSHomes.slideshow()
       
+    if $('.posts').length
+      SSHomes.posts()
+      
   slideshow: ->
-    $('a.prev').click (event) ->
+    $('.slideshow a.prev').click (event) ->
       slides = $(this).parent().siblings('.slides')
       slides_count = $('img', slides).length
       current_slide = $('img:visible', slides)
@@ -26,7 +29,7 @@ window.SSHomes ?=
           
       event.preventDefault()
     
-    $('a.next').click (event) ->
+    $('.slideshow a.next').click (event) ->
       slides = $(this).parent().siblings('.slides')
       slides_count = $('img', slides).length
       current_slide = $('img:visible', slides)
@@ -37,6 +40,35 @@ window.SSHomes ?=
       else
         $(current_slide).fadeOut 400, ->
           $($('img', slides).get(0)).fadeIn()
+      
+      event.preventDefault()
+      
+  posts: ->
+    $('.posts a.prev').click (event) ->
+      posts = $(this).parent().siblings('.post')
+      posts_count = $(posts).length
+      current_post = $(this).parent().siblings('.post:visible')
+      current_post_index = $(posts).index(current_post)
+      if current_post_index  > 0
+        $(current_post).fadeOut 400, ->
+          $($(posts).get(current_post_index  - 1)).fadeIn()
+      else
+        $(current_post).fadeOut 400, ->
+          $($(posts).get(posts_count - 1)).fadeIn()
+          
+      event.preventDefault()
+    
+    $('.posts a.next').click (event) ->
+      posts = $(this).parent().siblings('.post')
+      posts_count = $(posts).length
+      current_post = $(this).parent().siblings('.post:visible')
+      current_post_index = $(posts).index(current_post)
+      if current_post_index  < posts_count  - 1
+        $(current_post).fadeOut 400, ->
+          $($(posts).get(current_post_index + 1)).fadeIn()
+      else
+        $(current_post).fadeOut 400, ->
+          $($(posts).get(0)).fadeIn()
       
       event.preventDefault()
       
