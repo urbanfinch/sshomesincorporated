@@ -46,6 +46,14 @@ p {
   line-height: 22px;
 }
 
+hr {
+  border: 0px;
+  outline: 0px;
+  height: 1px;
+  background-color: $gray;
+  margin-bottom: 20px;
+}
+
 form {
   div {
     margin-bottom: 10px;

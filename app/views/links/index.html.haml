@@ -1,1 +1,25 @@
 %section{:id => 'links'}
+  .left
+    %h2 Links
+    - unless @link_nav.nil?
+      - @link_links = @link_nav.links
+      %nav
+        - @link_links.each do |link|
+          %a{:href => link.url}= link.name
+  .right
+    %h2 Our Clients
+    - unless @client_nav.nil?
+      - @client_links = @client_nav.links
+      - (0..@client_links.count).each do |i|
+        - if i % 3 == 0
+          .row
+            - (i...(i + 3)).each do |j|
+              - link = @client_links[j] unless @client_links[j].nil?
+              - if link
+                .link
+                  %a{:href => link.url}
+                    %img{:src => link.image.url(:thumb), :alt => link.name, :width => '203px', :height => '93px'}
+                  %h3
+                    %a{:href => link.url}= link.name
+                  %p= link.description
+    

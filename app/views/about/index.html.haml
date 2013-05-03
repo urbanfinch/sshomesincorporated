@@ -1,1 +1,38 @@
 %section{:id => 'about'}
+  .left
+    %h2 Our Advantages
+    %ol
+      - 3.times do |i|
+        %li
+          %p.indicator= i
+          %p.title
+            %span.bold Praesent vestibulum molestie lacus.
+          %p
+            Aenean Monummy hendrit mauris. Phasellus porta.
+    %hr
+    %h2 Our Principles
+    %ul
+      %li Praesent vestibulum molestie lacus
+      %li Aenean nonummy  hendrerit mauris
+      %li parturient montes, nascetur ridiculus mus
+      %li Phasellus porta
+  .right
+    - unless @right_blurb.nil?
+      %h2= @right_blurb.title
+      %p
+        %span.bold= @right_blurb.subtitle
+      = simple_format(@right_blurb.content)
+    %hr
+    %h2 Our Team
+    - (0..@employees.count).each do |i|
+      - if i % 3 == 0
+        .row
+          - (i...(i + 3)).each do |j|
+            - employee = @employees[j] unless @employees[j].nil?
+            - if employee
+              .employee
+                %a{:href => "mailto:#{employee.email}"}
+                  %img{:src => employee.image.url(:thumb), :alt => employee.name}
+                %h3
+                  %a{:href => "mailto:#{employee.email}"}= employee.name
+                %p= employee.description

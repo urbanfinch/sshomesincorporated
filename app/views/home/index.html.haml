@@ -13,23 +13,17 @@
   .container
     .sidebar
       %img{:src => '/assets/man_on_phone.png', :alt => 'man_on_phone'}
-      %h3 Welcome
-      %h4
-        Praesent vestibulum molestie lacus. Aenean nonummy
-      %p
-        Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.
-        et magnis dis parturient montes nascetur ridiculus mus.
-      %p
-        Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.
-        et magnis dis parturient montes, nascetur ridiculus mus.
+      - unless @sidebar_blurb.nil?
+        %h3= @sidebar_blurb.title
+        %h4= @sidebar_blurb.subtitle
+        = simple_format(@sidebar_blurb.content)
     .content
       .top
         .left
-          %h2 Who We Are
-          %h3 Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris.
-          %p
-            Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.
-            et magnis dis parturient montes, nascetur ridiculus mus.
+          - unless @top_left_blurb.nil?
+            %h2= @top_left_blurb.title
+            %h3= @top_left_blurb.subtitle
+            %p= @top_left_blurb.content
         .middle
           %h2 Capabilities
           %ul
@@ -37,28 +31,29 @@
             %li Aenean nonummy  hendrerit mauris
             %li parturient montes, nascetur ridiculus mus
             %li Phasellus porta
-        .right
-          %h3.date
-            %span.day 25
-            %span.month Nov
-          %h3 Praesent vestibulum molestie lacus
-          %p Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris. Phasellus porta.
+        - unless @post.nil?
+          .right
+            %h3.date
+              %span.day= @post.created_at.day
+              %span.month= @post.created_at.strftime("%b")
+            %h3= @post.title
+            %p= @post.content
       .bottom
         .left
-          %h2 Lorem
-          %img{:src => '/assets/missing/210_158.png', :alt => ''}
-          %p
-            Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.
-            et magnis dis parturient montes, nascetur ridiculus mus.
+          - unless @bottom_left_blurb.nil?
+            %h2= @bottom_left_blurb.title
+            %img{:src => @bottom_left_blurb.image.url, :alt => @bottom_left_blurb.title}
+            %h3= @bottom_left_blurb.subtitle
+            %p= @bottom_left_blurb.content
         .middle
-          %h2 Phasellus
-          %img{:src => '/assets/missing/210_158.png', :alt => ''}
-          %p
-            Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.
-            et magnis dis parturient montes, nascetur ridiculus mus.
+          - unless @bottom_middle_blurb.nil?
+            %h2= @bottom_middle_blurb.title
+            %img{:src => @bottom_middle_blurb.image.url, :alt => @bottom_middle_blurb.title}
+            %h3= @bottom_middle_blurb.subtitle
+            %p= @bottom_middle_blurb.content
         .right
-          %h2 Aenean
-          %img{:src => '/assets/missing/210_158.png', :alt => ''}
-          %p
-            Praesent vestibulum molestie lacus. Aenean nonummy  hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus.
-            et magnis dis parturient montes, nascetur ridiculus mus.
+          - unless @bottom_right_blurb.nil?
+            %h2= @bottom_right_blurb.title
+            %img{:src => @bottom_right_blurb.image.url, :alt => @bottom_right_blurb.title}
+            %h3= @bottom_right_blurb.subtitle
+            %p= @bottom_right_blurb.content

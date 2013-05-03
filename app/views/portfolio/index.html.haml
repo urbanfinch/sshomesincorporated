@@ -8,7 +8,7 @@
           - if album
             .album
               %a{:href => show_portfolio_path(album)}
-                %img{:src => album.thumb.url(:thumb), :alt => album.name}
+                %img{:src => album.image.url(:thumb), :alt => album.name}
               %h3
                 %a{:href => show_portfolio_path(album)}= album.name
               %p= album.description
