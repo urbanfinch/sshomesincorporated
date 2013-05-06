@@ -9,8 +9,6 @@ class Blurb
   field :title,       :type => String
   
   has_mongoid_attached_file :image,
-    :default_url => '/assets/missing/:attachment/missing_:style.png',
-    :styles => {
-      :thumb       => ['210x158',   :png]
-    }
+    :default_url => '/assets/missing/:attachment/missing_:style.png'
+    
 end

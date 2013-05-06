@@ -8,6 +8,8 @@ Sshomesincorporated::Application.routes.draw do
   get 'links' => 'links#index'
   get 'contact' => 'contact#index'
   post 'contact' => 'contact#create'
+  
+  resources :posts, :only => [:show]
  
   root :to => 'home#index'
   match '*path', :to => 'home#index'

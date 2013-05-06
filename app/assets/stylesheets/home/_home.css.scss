@@ -118,6 +118,17 @@ section#home {
                 display: block;
               }
             }
+            
+            h3 {
+              a {
+                text-decoration: none;
+                color: $light-blue;
+              }
+              
+              a:hover {
+                color: $blue;
+              }
+            }
           }
           
           div.post:first-child {
@@ -126,7 +137,6 @@ section#home {
           
           div.nav {
             float: right;
-            width: 64px;
             height: 30px;
     
             a {
@@ -142,6 +152,11 @@ section#home {
               color: $white;
               background-color: $blue;
               font-family: 'BenchNine', sans-serif;
+            }
+            
+            a.more {
+              width: 144px;
+              margin-left: 0px;
             }
           }
         }

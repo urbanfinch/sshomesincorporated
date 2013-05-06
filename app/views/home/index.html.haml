@@ -3,7 +3,7 @@
     .slides
       - unless @album.nil?
         - @album.images.each do |image|
-          %img{:src => image.image.url(:large), :alt => image.id}
+          %img{:src => image.image.url, :alt => image.id}
     .tag
       %img{:src => '/assets/build_the_world.png', :alt => 'build_the_world'}
     .nav
@@ -27,13 +27,15 @@
         .right
           .posts
             - @posts.each do |post|
-              .post
+              .post{:'data-id' => post.id}
                 %h3.date
                   %span.day= post.created_at.day
                   %span.month= post.created_at.strftime("%b")
-                %h3= post.title
+                %h3
+                  = link_to post.title, post_path(post)
                 %p= post.content
             .nav
+              %a{:href => post_path(@posts.first), :class => 'more'} Read More...
               %a{:href => '#prev', :class => 'prev'} <
               %a{:href => '#next', :class => 'next'} >
       .bottom

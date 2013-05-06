@@ -9,10 +9,7 @@ class Employee
   field :title,           :type => String
   
   has_mongoid_attached_file :image,
-    :default_url => '/assets/missing/:attachment/missing_:style.png',
-    :styles => {
-      :thumb       => ['185x185',   :png]
-    }
+    :default_url => '/assets/missing/:attachment/missing_:style.png'
   
   validates_presence_of     :name, :title
   validates_presence_of     :email

@@ -8,10 +8,7 @@ class Album
   field :description,         :type => String
   
   has_mongoid_attached_file :image,
-    :default_url => '/assets/missing/:attachment/missing_:style.png',
-    :styles => {
-      :thumb       => ['300x300',   :png]
-    }
+    :default_url => '/assets/missing/:attachment/missing_:style.png'
   
   validates_presence_of :name
   

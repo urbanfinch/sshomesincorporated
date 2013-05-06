@@ -1,0 +1,6 @@
+%section{:id => 'post'}
+  %h2= @post.title
+  %h3= @post.created_at.to_formatted_s(:post)
+  = simple_format(@post.content)
+  - if @post.image.exists?
+    = image_tag @post.image.url

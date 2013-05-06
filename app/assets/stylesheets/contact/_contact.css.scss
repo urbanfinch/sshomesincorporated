@@ -37,6 +37,7 @@ section#contact {
           dt {
             float: left;
             font-weight: bold;
+            line-height: 16px;
           }
           
           dt:after {
@@ -46,6 +47,7 @@ section#contact {
           
           dd {
             display: block;
+            line-height: 16px;
           }
         }
       }

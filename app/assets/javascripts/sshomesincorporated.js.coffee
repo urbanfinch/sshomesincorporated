@@ -51,10 +51,14 @@ window.SSHomes ?=
       current_post_index = $(posts).index(current_post)
       if current_post_index  > 0
         $(current_post).fadeOut 400, ->
-          $($(posts).get(current_post_index  - 1)).fadeIn()
+          new_post = $(posts).get(current_post_index  - 1)
+          $('.posts a.more').attr('href', '/posts/' + $(new_post).data('id'))
+          $(new_post).fadeIn()
       else
         $(current_post).fadeOut 400, ->
-          $($(posts).get(posts_count - 1)).fadeIn()
+          new_post = $(posts).get(posts_count - 1)
+          $('.posts a.more').attr('href', '/posts/' + $(new_post).data('id'))
+          $(new_post).fadeIn()
           
       event.preventDefault()
     
@@ -65,10 +69,14 @@ window.SSHomes ?=
       current_post_index = $(posts).index(current_post)
       if current_post_index  < posts_count  - 1
         $(current_post).fadeOut 400, ->
-          $($(posts).get(current_post_index + 1)).fadeIn()
+          new_post = $(posts).get(current_post_index + 1)
+          $('.posts a.more').attr('href', '/posts/' + $(new_post).data('id'))
+          $(new_post).fadeIn()
       else
         $(current_post).fadeOut 400, ->
-          $($(posts).get(0)).fadeIn()
+          new_post = $(posts).get(0)
+          $('.posts a.more').attr('href', '/posts/' + $(new_post).data('id'))
+          $(new_post).fadeIn()
       
       event.preventDefault()
       
