@@ -35,7 +35,7 @@
                   = link_to post.title, post_path(post)
                 %p= post.content
             .nav
-              %a{:href => post_path(@posts.first), :class => 'more'} Read More...
+              %a{:href => (post_path(@posts.first) if @posts.first), :class => 'more'} Read More...
               %a{:href => '#prev', :class => 'prev'} <
               %a{:href => '#next', :class => 'next'} >
       .bottom
