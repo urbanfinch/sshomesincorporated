@@ -1,35 +1,9 @@
 %section{:id => 'about'}
   .left
-    - unless @sidebar_top_list.nil?
-      %h2= @sidebar_top_list.title
-      %ol
-        - @sidebar_top_list.bullets.asc(:index).each_with_index do |bullet, index|
-          %li
-            %p.indicator= index
-            %p= bullet.content
-    - unless @sidebar_bottom_list.nil?
-      %hr
-      %h2= @sidebar_bottom_list.title
-      %ul
-        - @sidebar_bottom_list.bullets.asc(:index).each do |bullet|
-          %li= bullet.content
-  .right
-    - unless @right_blurb.nil?
-      %h2= @right_blurb.title
+    - unless @left_blurb.nil?
+      %h2= @left_blurb.title
       %p
-        %span.bold= @right_blurb.subtitle
-      = simple_format(@right_blurb.content)
-    %hr
-    %h2 Our Team
-    - (0..@employees.count).each do |i|
-      - if i % 3 == 0
-        .row
-          - (i...(i + 3)).each do |j|
-            - employee = @employees[j] unless @employees[j].nil?
-            - if employee
-              .employee
-                %a{:href => "mailto:#{employee.email}"}
-                  %img{:src => employee.image.url(:thumb), :alt => employee.name}
-                %h3
-                  %a{:href => "mailto:#{employee.email}"}= employee.name
-                %p= employee.description
+        %span.bold= @left_blurb.subtitle
+      = simple_format(@left_blurb.content)
+  .right
+    = image_tag 'family.png'

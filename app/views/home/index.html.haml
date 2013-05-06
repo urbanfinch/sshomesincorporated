@@ -9,14 +9,14 @@
     .nav
       %a{:href => '#prev', :class => 'prev'} <
       %a{:href => '#next', :class => 'next'} >
-  %h2.slogan We have a passion for creating new and unique spaces
   .container
     .sidebar
-      %img{:src => '/assets/man_on_phone.png', :alt => 'man_on_phone'}
-      - unless @sidebar_blurb.nil?
-        %h3= @sidebar_blurb.title
-        %h4= @sidebar_blurb.subtitle
-        = simple_format(@sidebar_blurb.content)
+      %h3 Testimonials
+      %h4 What Our Customers Are Saying
+      - @testimonials.each do |testimonial|
+        %q
+          = testimonial.quote
+        %small= testimonial.name
     .content
       .top
         .left
@@ -24,12 +24,6 @@
             %h2= @top_left_blurb.title
             %h3= @top_left_blurb.subtitle
             %p= @top_left_blurb.content
-        .middle
-          - unless @top_middle_list.nil?
-            %h2= @top_middle_list.title
-            %ul
-              - @top_middle_list.bullets.asc(:index).each do |bullet|
-                %li= bullet.content
         .right
           .posts
             - @posts.each do |post|

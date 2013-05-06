@@ -7,23 +7,22 @@ body {
   color: $blue;
   background-image: url('/assets/background.png');
   background-repeat: no-repeat;
-  background-size: 100% 720px;
+  background-size: 100% 700px;
   font-family: Arial, sans-serif;
   font-size: 12px;
 }
 
 header {
-  height: 210px;
+  height: 190px;
   
   div.logo {
     width: 250px;
-    height: 210px;
+    height: 190px;
     float: left;
     
     h1 {
       width: 250px;
-      height: 210px;
-      background-color: $blue;
+      height: 190px;
       background-image: url('/assets/logo.png');
       background-repeat: no-repeat;
       background-position: 11px 0px;
@@ -31,7 +30,7 @@ header {
       a {
         display: block;
         width: 250px;
-        height: 210px;
+        height: 190px;
         text-indent: -9999px;
         text-decoration: none;
       }
@@ -40,23 +39,51 @@ header {
   
   div.nav {
     float: left;
-    width: 146px;
-    height: 158px;
-    padding: 26px 32px;
-    background-color: $light-blue;
+    width: 530px;
+    margin-top: 140px;
     
     a {
       display: block;
+      float: left;
+      margin-right: 20px;
       text-decoration: none;
       text-transform: uppercase;
       font-family: 'BenchNine', sans-serif;
       font-size: 28px;
-      line-height: 30px;
       color: $blue;
     }
     
+    a:last-child {
+      margin-right: 0px;
+    }
+    
     a:hover, a.selected {
-      color: $white;
+      color: $light-blue;
+    }
+  }
+  
+  div.social {
+    float: left;
+    width: 205px;
+    margin-top: 140px;
+    
+    a {
+      display: block;
+      float: right;
+      margin-left: 5px;
+      text-decoration: none;
+      
+      img {
+        display: block;
+        width: 28px;
+        height: 28px;
+        padding: 0px;
+        background-color: $light-blue;
+      }
+    }
+    
+    a:last-child {
+      margin-left: 0px;
     }
   }
 }
@@ -72,6 +99,11 @@ footer {
   span {
     display: block;
     padding: 10px 0px;
+    
+    a {
+      color: $white;
+      text-decoration: none;
+    }
   }
   
   div.left {

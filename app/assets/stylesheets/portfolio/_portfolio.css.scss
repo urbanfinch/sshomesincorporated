@@ -11,44 +11,53 @@ section#portfolio {
     margin-bottom: 20px;
   }
   
-  div.row {
+  div.portfolio {
     @include clearfix;
     margin-bottom: 20px;
     
-    div.album {
-      float: left;
-      width: 295px;
-      padding: 10px;
-      background-color: $gray;
+    div.row {
+      @include clearfix;
+      margin-bottom: 20px;
     
-      img {
-        display: block;
+      div.column {
+        float: left;
         width: 295px;
-        height: 295px;
-        padding: 0px;
-        margin-bottom: 10px;
-      }
+        padding: 10px;
+        background-color: $gray;
     
-      h3 {
-        margin-bottom: 10px;
+        img {
+          display: block;
+          width: 295px;
+          height: 295px;
+          padding: 0px;
+          margin-bottom: 10px;
+        }
+    
+        h3 {
+          margin-bottom: 10px;
       
-        a {
-          text-decoration: none;
-          color: $light-blue;
+          a {
+            text-decoration: none;
+            color: $light-blue;
+          }
+      
+          a:hover {
+            color: $blue;
+          }
         }
       
-        a:hover {
-          color: $blue;
+        p {
+          margin-bottom: 0px;
         }
       }
-      
-      p {
-        margin-bottom: 0px;
+    
+      div.column:nth-child(2) {
+        margin: 0px 20px;
       }
     }
-    
-    div.album:nth-child(2) {
-      margin: 0px 20px;
-    }
+  }
+  
+  div.portfolio:last-child {
+    margin-bottom: 0px;
   }
 }

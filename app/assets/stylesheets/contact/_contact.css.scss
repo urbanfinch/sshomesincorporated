@@ -7,13 +7,55 @@ section#contact {
     margin-bottom: 20px;
   }
   
+  div.top {
+    margin-bottom: 20px;
+  }
+  
   div.left {
     float: left;
     width: 400px;
     
-    img {
-      width: 380px;
-      margin-bottom: 40px;
+    div.our_team {
+      margin-bottom: 20px;
+      
+      div.employee {
+        margin-bottom: 20px;
+        
+        p {
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 16px;
+          margin-bottom: 10px;
+          color: $light-blue;
+        }
+        
+        p:first-line {
+          color: $blue;
+        }
+        
+        dl {
+          dt {
+            float: left;
+            font-weight: bold;
+          }
+          
+          dt:after {
+            content: ':';
+            padding-right: 10px;
+          }
+          
+          dd {
+            display: block;
+          }
+        }
+      }
+    }
+    
+    div.contact_info {
+      img {
+        width: 380px;
+        margin-bottom: 40px;
+      }
     }
   }
   

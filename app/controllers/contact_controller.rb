@@ -2,7 +2,9 @@ class ContactController < ApplicationController
   
   def index
     @contact = Contact.new
+    @employees = Employee.all
     @map = Map.where(:identifier => 'contact').first
+    @top_blurb = Blurb.where(:identifier => 'contact_top').first
     
     respond_to do |format|
       format.html

@@ -1,0 +1,27 @@
+%section{:id => 'service'}
+  .top
+    .left
+      - unless @service_list.nil?
+        %h2= @service_list.title
+        %ul
+          - @service_list.bullets.each do |bullet|
+            %li
+              .indicator
+                %span.letter= bullet.title[0,1]
+                %span.title= bullet.title
+              = bullet.content
+    .right
+      - unless @service_top_right_album.nil?
+        - @service_top_right_album.images.each do |image|
+          = image_tag image.image.url
+  .bottom
+    .left
+      - unless @service_blurb.nil?
+        %h2= @service_blurb.title
+        - if @service_blurb.subtitle
+          %h3= @service_blurb.subtitle
+        %p= @service_blurb.content
+    .right
+      - unless @service_bottom_right_album.nil?
+        - @service_bottom_right_album.images.each do |image|
+          = image_tag image.image.url

@@ -17,31 +17,49 @@ section#home {
     
     div.sidebar {
       float: left;
-      width: 180px;
+      width: 140px;
+      padding: 20px;
       background-color: $light-blue;
       
-      img {
-        padding: 0px;
-      }
-      
       h3 {
-        font-size: 48px;
-        margin: 20px;
+        margin-bottom: 20px;
+        font-size: 34px;
         color: $white;
       }
       
       h4 {
-        margin: 20px;
+        margin-bottom: 20px;
         font-size: 16px;
         text-transform: uppercase;
         color: $white;
         font-family: 'BenchNine', sans-serif;
       }
       
-      p {
-        margin: 0px 20px;
-        padding-bottom: 20px;
+      q {
+        margin-bottom: 10px;
         color: $gray;
+        font-style: italic;
+        line-height: 16px;
+      }
+      
+      q:before, q:after {
+        content: '"';
+      }
+      
+      small {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: right;
+        color: $blue;
+      }
+      
+      small:before {
+        content: '- ';
+      }
+      
+      small:last-child {
+        margin-bottom: 0px;
       }
     }
     
@@ -63,17 +81,18 @@ section#home {
           color: $light-blue;
         }
         
-        div.left, div.middle, div.right {
+        div.left, div.right {
           float: left;
-          width: 210px;
+        }
+        
+        div.left {
+          width: 500px;
           padding: 20px;
         }
         
-        div.middle {
-          margin: 0px 20px;
-        }
-        
         div.right {
+          width: 210px;
+          padding: 20px;
           background-color: $gray;
           
           div.post {

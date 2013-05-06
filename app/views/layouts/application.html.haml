@@ -24,10 +24,19 @@
         .nav
           %nav
             = link_to 'Home', home_path, :class => "#{'selected' if params[:controller] == 'home'}"
-            = link_to 'About', about_path, :class => "#{'selected' if params[:controller] == 'about'}"
+            = link_to 'About Us', about_path, :class => "#{'selected' if params[:controller] == 'about'}"
+            = link_to 'Services', service_path, :class => "#{'selected' if params[:controller] == 'service'}"
             = link_to 'Portfolio', portfolio_path, :class => "#{'selected' if params[:controller] == 'portfolio'}"
             = link_to 'Links', links_path, :class => "#{'selected' if params[:controller] == 'links'}"
             = link_to 'Contact', contact_path, :class => "#{'selected' if params[:controller] == 'contact'}"
+        .social
+          %nav
+            %a{:href => 'http://www.linkedin.com'}
+              = image_tag 'linkedin.png', :size => '28x28'
+            %a{:href => 'http://www.facebook.com'}
+              = image_tag 'facebook.png', :size => '28x28'
+              %a{:href => 'http://www.twitter.com'}
+                = image_tag 'twitter.png', :size => '28x28'
       .flash
         - if flash[:notice]
           %p.notice= flash[:notice]
@@ -39,5 +48,6 @@
         .left
           %span &copy; 2013 S & S Homes, Inc.
         .right
-          %span Call Us
+          %span 
+            = mail_to 'scott@sshomesincorporated.com'
           %span (402) 202-6527

@@ -1,20 +1,47 @@
 %section{:id => 'contact'}
+  .top
+    - unless @top_blurb.nil?
+      %h2= @top_blurb.title
+      = simple_format(@top_blurb.content)
   .left
+    %h2 Our Team
+    .our_team
+      - @employees.each do |employee|
+        .employee
+          %p
+            = employee.name
+            - if employee.title
+              %br
+              = employee.title
+            - if employee.subtitle
+              %br
+              = employee.subtitle
+          %dl
+            - employee.phones.each do |phone|
+              %dt= phone.type
+              %dd= phone.number
+            %dt Email
+            %dd= employee.email
+            - employee.urls.each do |url|
+              %dt= url.name
+              %dd
+                = link_to url.url
     %h2 Contact Info
-    - unless @map.nil?
-      %a{:href => URI::escape("http://maps.google.com/maps?q=#{@map.center}")}
-        %img{:src => URI::escape("http://maps.googleapis.com/maps/api/staticmap?center=#{@map.center}&zoom=#{@map.zoom}&size=380x380&markers=#{@map.center}&sensor=false")}
-    %p
-      %a{:href => 'http://maps.google.com/maps?q=2320+S.+48th+Street,+Lincoln,+Nebraska'}
-        %span.bold 2320 S. 48th Street
-      %br
-      %a{:href => 'http://maps.google.com/maps?q=2320+S.+48th+Street,+Lincoln,+Nebraska'}
-        %span.bold Lincoln, NE 68506
-      %br
-      Phone: (402) 202-6527
-      %br
-      E-mail: 
-      %a{:href => 'mailto:info@sshomesincorporated.com'} info@sshomesincorporated.com
+    .contact_info
+      - unless @map.nil?
+        %a{:href => URI::escape("http://maps.google.com/maps?q=#{@map.center}")}
+          %img{:src => URI::escape("http://maps.googleapis.com/maps/api/staticmap?center=#{@map.center}&zoom=#{@map.zoom}&size=380x380&markers=#{@map.center}&sensor=false")}
+      %p
+        %a{:href => 'http://maps.google.com/maps?q=2320+S.+48th+Street,+Lincoln,+Nebraska'}
+          %span.bold 2320 S. 48th Street
+        %br
+        %a{:href => 'http://maps.google.com/maps?q=2320+S.+48th+Street,+Lincoln,+Nebraska'}
+          %span.bold Lincoln, NE 68506
+        %br
+        Phone: (402) 202-6527
+        %br
+        E-mail: 
+        %a{:href => 'mailto:info@sshomesincorporated.com'} info@sshomesincorporated.com
   .right
     %h2 Get In Touch
     = render :partial => 'shared/error', :locals => {:object => @contact}
