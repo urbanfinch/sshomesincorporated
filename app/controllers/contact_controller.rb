@@ -15,7 +15,8 @@ class ContactController < ApplicationController
     @contact = Contact.new(params[:contact])
     
     if @contact.save
-      # Send mail
+      ContactMailer.contact(@contact).deliver
+      
       redirect_to contact_path, :notice => 'Thank You! Your message has been sent.'
     else
       render :action => :index

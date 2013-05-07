@@ -1,5 +1,5 @@
 class ContactMailer < ActionMailer::Base
-  default from: "mailer@sshomesincorporated.com"
+  default from: "scott@sshomesincorporated.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -10,7 +10,7 @@ class ContactMailer < ActionMailer::Base
     @params = params
     
     mail(
-      :to      => "contact@sshomesincorporated.com",
+      :to      => "scott@sshomesincorporated.com",
       :subject => "Contact from sshomesincorporated.com") do |format|
         format.text
         format.html
