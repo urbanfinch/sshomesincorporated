@@ -1,6 +1,5 @@
 class Link
   include Mongoid::Document
-  include Mongoid::Timestamps
   include Mongoid::Paperclip
   
   field :name,          :type => String
@@ -12,5 +11,5 @@ class Link
   
   validates_presence_of     :name, :url
   
-  belongs_to :nav
+  embedded_in :nav
 end

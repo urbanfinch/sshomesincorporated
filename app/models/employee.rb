@@ -15,6 +15,9 @@ class Employee
   validates_presence_of     :email
   validates                 :email, :email => true
   
+  default_scope ->{ where(:account_id => Account.current_id) }
+  
+  belongs_to  :account
   embeds_many :phones, :cascade_callbacks => true
   embeds_many :urls,   :cascade_callbacks => true
   

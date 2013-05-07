@@ -1,6 +1,5 @@
 class Image
   include Mongoid::Document
-  include Mongoid::Timestamps
   include Mongoid::Paperclip
   
   field :name,        :type => String
@@ -12,5 +11,5 @@ class Image
     
   validates_presence_of :name
   
-  belongs_to :album
+  embedded_in :album
 end

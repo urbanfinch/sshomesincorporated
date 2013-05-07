@@ -8,5 +8,8 @@ class Nav
   
   validates_presence_of     :name
   
-  has_many :links
+  default_scope ->{ where(:account_id => Account.current_id) }
+  
+  belongs_to  :account
+  embeds_many :links
 end

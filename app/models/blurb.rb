@@ -11,4 +11,7 @@ class Blurb
   has_mongoid_attached_file :image,
     :default_url => '/assets/missing/:attachment/missing_:style.png'
     
+  default_scope ->{ where(:account_id => Account.current_id) }
+  
+  belongs_to  :account
 end

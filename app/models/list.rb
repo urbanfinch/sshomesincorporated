@@ -7,5 +7,8 @@ class List
   
   validates_presence_of :title
   
+  default_scope ->{ where(:account_id => Account.current_id) }
+  
+  belongs_to  :account
   embeds_many :bullets
 end

@@ -1,6 +1,5 @@
 class Phone
   include Mongoid::Document
-  include Mongoid::Timestamps
     
   field :type,    :type => String
   field :number,  :type => String

@@ -3,12 +3,17 @@ class Post
   include Mongoid::Timestamps
   include Mongoid::Paperclip
   
-  field :title,     :type => String
   field :content,   :type => String
   field :published, :type => Boolean, :default => false
+  field :summary,   :type => String
+  field :title,     :type => String
   
   has_mongoid_attached_file :image,
     :default_url => '/assets/missing/:attachment/missing_:style.png'
     
-  validates_presence_of     :title, :content
+  validates_presence_of     :title, :summary, :content
+  
+  default_scope ->{ where(:account_id => Account.current_id) }
+  
+  belongs_to  :account
 end

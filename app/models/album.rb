@@ -12,5 +12,8 @@ class Album
   
   validates_presence_of :name
   
-  has_many :images
+  default_scope ->{ where(:account_id => Account.current_id) }
+  
+  belongs_to  :account
+  embeds_many :images
 end
