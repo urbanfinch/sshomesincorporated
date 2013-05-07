@@ -34,11 +34,12 @@
             %nav
               - social_nav.links.each do |link|
                 = link_to image_tag(link.image.url, :size => '28x28'), link.url
-      .flash
-        - if flash[:notice]
-          %p.notice= flash[:notice]
-        - if flash[:alert]
-          %p.alert= flash[:alert]
+      - unless flash.nil?
+        .flash
+          - if flash[:notice]
+            %p.notice= flash[:notice]
+          - if flash[:alert]
+            %p.alert= flash[:alert]
       = yield
     %footer
       .container
