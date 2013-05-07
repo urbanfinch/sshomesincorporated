@@ -1,7 +1,7 @@
 class PortfolioController < ApplicationController
   
   def index
-    @albums = Album.all
+    @albums = Album.where(:identifier => 'portfolio')
     @homes_for_sale_nav = Nav.where(:identifier => 'homes_for_sale').first
     
     respond_to do |format|
