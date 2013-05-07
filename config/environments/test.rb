@@ -32,4 +32,9 @@ Sshomesincorporated::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  
+  config.paperclip_defaults = {
+    :command_path => "/usr/local/bin/",
+    :default_url => '/assets/missing.png'
+  }
 end

@@ -8,8 +8,7 @@ class Employee
   field :subtitle,        :type => String
   field :title,           :type => String
   
-  has_mongoid_attached_file :image,
-    :default_url => '/assets/missing/:attachment/missing_:style.png'
+  has_mongoid_attached_file :image
   
   validates_presence_of     :name, :title
   validates_presence_of     :email

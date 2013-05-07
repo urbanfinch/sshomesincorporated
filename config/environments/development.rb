@@ -32,6 +32,7 @@ Sshomesincorporated::Application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   
   config.paperclip_defaults = {
-    :command_path => "/usr/local/bin/"
+    :command_path => "/usr/local/bin/",
+    :default_url => '/assets/missing.png'
   }
 end

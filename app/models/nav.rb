@@ -11,5 +11,5 @@ class Nav
   default_scope ->{ where(:account_id => Account.current_id) }
   
   belongs_to  :account
-  embeds_many :links
+  embeds_many :links, :cascade_callbacks => true
 end

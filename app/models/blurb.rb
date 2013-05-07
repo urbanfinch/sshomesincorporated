@@ -8,8 +8,7 @@ class Blurb
   field :subtitle,    :type => String
   field :title,       :type => String
   
-  has_mongoid_attached_file :image,
-    :default_url => '/assets/missing/:attachment/missing_:style.png'
+  has_mongoid_attached_file :image
     
   default_scope ->{ where(:account_id => Account.current_id) }
   

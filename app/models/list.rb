@@ -10,5 +10,5 @@ class List
   default_scope ->{ where(:account_id => Account.current_id) }
   
   belongs_to  :account
-  embeds_many :bullets
+  embeds_many :bullets, :cascade_callbacks => true
 end
