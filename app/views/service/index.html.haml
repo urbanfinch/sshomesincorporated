@@ -9,7 +9,7 @@
               .indicator
                 %span.letter= bullet.title[0,1]
                 %span.title= bullet.title
-              = bullet.content
+              = simple_format(bullet.content)
     .right
       - unless @service_top_right_album.nil?
         - @service_top_right_album.images.each do |image|
