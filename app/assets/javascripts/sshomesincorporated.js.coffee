@@ -94,6 +94,6 @@ window.SSHomes ?=
         current_count += 1
       else
         current_count = 0
-    , 5000)
+    , 10000)
     
 SSHomes.init()
