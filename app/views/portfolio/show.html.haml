@@ -1,9 +1,9 @@
-%section{:id => 'portfolio'}
+%section{:id => 'portfolio_show'}
   %h2= @album.name
   %p= @album.description
   .slideshow
     .slides
-      - @album.images.each do |image|
+      - @album.images.asc(:index).each do |image|
         %img{:src => image.image.url, :alt => image.id}
     .nav
       %a{:href => '#prev', :class => 'prev'} <

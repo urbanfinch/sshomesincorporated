@@ -61,3 +61,23 @@ section#portfolio {
     margin-bottom: 0px;
   }
 }
+
+section#portfolio_show {
+  @include clearfix;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  img {
+    width: 965px;
+    height: 490px;
+    padding: 10px;
+  }
+}

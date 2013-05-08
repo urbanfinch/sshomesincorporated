@@ -21,6 +21,8 @@
         - if @service_blurb.subtitle
           %h3= @service_blurb.subtitle
         %p= @service_blurb.content
+      %p
+        = link_to 'Economic Benefits of New Home Construction', 'http://www.nahb.org/fileUpload_details.aspx?contentID=155811'
     .right
       - unless @service_bottom_right_album.nil?
         - @service_bottom_right_album.images.each do |image|
