@@ -4,6 +4,7 @@ class Image
   
   field :name,        :type => String
   field :identifier,  :type => String
+  field :index,       :type => Integer, :default => 0
   field :description, :type => String
   
   has_mongoid_attached_file :image

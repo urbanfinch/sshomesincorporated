@@ -5,7 +5,7 @@
       - if i % 3 == 0
         .row
           - (i...(i + 3)).each do |j|
-            - album = @albums[j] unless @albums[j].nil?
+            - album = @albums.asc(:index)[j] unless @albums[j].nil?
             - if album
               .column
                 %a{:href => show_portfolio_path(album)}
@@ -21,7 +21,7 @@
         - if i % 3 == 0
           .row
             - (i...(i + 3)).each do |j|
-              - home = @homes_for_sale_nav.links[j] unless @homes_for_sale_nav.links[j].nil?
+              - home = @homes_for_sale_nav.links.asc(:index)[j] unless @homes_for_sale_nav.links[j].nil?
               - if home
                 .column
                   %a{:href => home.url}

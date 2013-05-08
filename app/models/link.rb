@@ -4,6 +4,7 @@ class Link
   
   field :name,          :type => String
   field :description,   :type => String
+  field :index,         :type => Integer, :default => 0
   field :url,           :type => String
   
   has_mongoid_attached_file :image

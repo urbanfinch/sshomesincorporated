@@ -7,7 +7,7 @@
         - if i % 4 == 0
           .row
             - (i...(i + 4)).each do |j|
-              - link = @client_links[j] unless @client_links[j].nil?
+              - link = @client_links.asc(:index)[j] unless @client_links.asc(:index)[j].nil?
               - if link
                 .link
                   %a{:href => link.url}= link.name
