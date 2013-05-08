@@ -20,7 +20,7 @@
         %h2= @service_blurb.title
         - if @service_blurb.subtitle
           %h3= @service_blurb.subtitle
-        %p= @service_blurb.content
+        %div= raw @service_blurb.content
       %br
       %p
         = link_to 'NHBB: Economic Benefits of New Home Construction', 'http://www.nahb.org/fileUpload_details.aspx?contentID=155811'

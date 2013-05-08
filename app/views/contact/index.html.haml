@@ -2,7 +2,7 @@
   .top
     - unless @top_blurb.nil?
       %h2= @top_blurb.title
-      = simple_format(@top_blurb.content)
+      %div= raw @top_blurb.content
   .left
     %h2 Our Team
     .our_team

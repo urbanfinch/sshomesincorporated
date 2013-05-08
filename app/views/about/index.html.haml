@@ -4,11 +4,11 @@
       %h2= @left_blurb_top.title
       %p
         %span.bold= @left_blurb_top.subtitle
-      = simple_format(@left_blurb_top.content)
+      %div= raw @left_blurb_top.content
     - unless @left_blurb_bottom.nil?
       %h2= @left_blurb_bottom.title
       %p
         %span.bold= @left_blurb_bottom.subtitle
-      = simple_format(@left_blurb_bottom.content)
+      %div= raw @left_blurb_bottom.content
   .right
     = image_tag 'family.png'
