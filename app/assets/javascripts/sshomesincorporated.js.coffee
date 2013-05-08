@@ -14,6 +14,9 @@ window.SSHomes ?=
     if $('.posts').length
       SSHomes.posts()
       
+    if $('.testimonials').length
+      SSHomes.testimonials()
+      
   slideshow: ->
     $('.slideshow a.prev').click (event) ->
       slides = $(this).parent().siblings('.slides')
@@ -80,4 +83,17 @@ window.SSHomes ?=
       
       event.preventDefault()
       
+  testimonials: ->
+    testimonials = $('.testimonials .testimonial')
+    testimonials_count = testimonials.length - 1
+    current_count = 1
+    testimonial_interval = window.setInterval(->
+      $(testimonials).hide()
+      $(testimonials).eq(current_count).show()
+      if current_count < testimonials_count
+        current_count += 1
+      else
+        current_count = 0
+    , 5000)
+    
 SSHomes.init()

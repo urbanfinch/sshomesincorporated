@@ -35,31 +35,41 @@ section#home {
         font-family: 'BenchNine', sans-serif;
       }
       
-      q {
-        margin-bottom: 10px;
-        color: $gray;
-        font-style: italic;
-        line-height: 16px;
-      }
+      div.testimonials {
+        div.testimonial {
+          display: none;
+        
+          q {
+            margin-bottom: 10px;
+            color: $gray;
+            font-style: italic;
+            line-height: 16px;
+          }
       
-      q:before, q:after {
-        content: '"';
-      }
+          q:before, q:after {
+            content: '"';
+          }
+          
+          small {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            text-align: right;
+            color: $blue;
+          }
       
-      small {
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        text-align: right;
-        color: $blue;
-      }
+          small:before {
+            content: '- ';
+          }
       
-      small:before {
-        content: '- ';
-      }
+          small:last-child {
+            margin-bottom: 0px;
+          }
+        }
       
-      small:last-child {
-        margin-bottom: 0px;
+        div.testimonial:first-child {
+          display: block;
+        }
       }
     }
     

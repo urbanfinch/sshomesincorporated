@@ -13,10 +13,12 @@
     .sidebar
       %h3 Testimonials
       %h4 What Our Customers Are Saying
-      - @testimonials.each do |testimonial|
-        %q
-          = testimonial.quote
-        %small= testimonial.name
+      .testimonials
+        - @testimonials.each do |testimonial|
+          .testimonial
+            %q
+              = testimonial.quote
+            %small= testimonial.name
     .content
       .top
         .left
