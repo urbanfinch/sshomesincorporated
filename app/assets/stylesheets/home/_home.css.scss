@@ -36,6 +36,32 @@ section#home {
       }
       
       div.testimonials {
+        div.nav {
+          float: right;
+          height: 30px;
+          margin-top: 20px;
+  
+          a {
+            display: block;
+            float: left;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            margin: 0px 1px;
+            font-size: 14px;
+            text-decoration: none;
+            text-align: center;
+            color: $white;
+            background-color: $blue;
+            font-family: 'BenchNine', sans-serif;
+          }
+          
+          a.more {
+            width: 144px;
+            margin-left: 0px;
+          }
+        }
+        
         div.testimonial {
           display: none;
         
