@@ -4,9 +4,9 @@ window.SSHomes ?=
       SSHomes.bootstrap()
           
   bootstrap: ->
-    unless $("body").data("controller") is "home"
-      $("body").css "background-image", "url('/assets/background_clipped.png')"
-      $("body").css "background-size", "100% 210px"
+    #unless $("body").data("controller") is "home"
+    #  $("body").css "background-image", "url('/assets/background_clipped.png')"
+    #  $("body").css "background-size", "100% 210px"
       
     if $('.slideshow').length
       SSHomes.slideshow()
