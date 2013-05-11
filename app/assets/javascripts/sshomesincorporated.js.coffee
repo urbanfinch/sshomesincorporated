@@ -14,7 +14,7 @@ window.SSHomes ?=
     if $('.posts').length
       SSHomes.posts()
       
-    if $('.testimonials').length
+    if $('section#home .testimonials').length
       SSHomes.testimonials()
       
   slideshow: ->
