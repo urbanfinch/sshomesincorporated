@@ -8,13 +8,13 @@ window.SSHomes ?=
     #  $("body").css "background-image", "url('/assets/background_clipped.png')"
     #  $("body").css "background-size", "100% 210px"
       
-    if $('.slideshow').length
+    if $('section#home .slideshow').length
       SSHomes.slideshow()
       
     if $('.posts').length
       SSHomes.posts()
       
-    if $('section#home .testimonials').length
+    if $('.testimonials').length
       SSHomes.testimonials()
       
   slideshow: ->
