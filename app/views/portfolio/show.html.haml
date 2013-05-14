@@ -4,7 +4,7 @@
   .slideshow
     .slides
       - @album.images.asc(:index).each do |image|
-        %img{:src => image.image.url, :alt => image.id}
+        %img{:src => image.image.url, :width => '985px', :height => '510px', :alt => image.id}
     .nav
       %a{:href => '#prev', :class => 'prev'} <
       %a{:href => '#next', :class => 'next'} >
