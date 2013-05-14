@@ -1,4 +1,7 @@
 window.SSHomes ?=
+  
+  play_slideshow: false
+  
   init: ->
     $(document).ready ->
       SSHomes.bootstrap()
@@ -8,7 +11,9 @@ window.SSHomes ?=
     #  $("body").css "background-image", "url('/assets/background_clipped.png')"
     #  $("body").css "background-size", "100% 210px"
       
-    if $('section#home .slideshow').length
+    if $('.slideshow').length
+      if $('section#home').length
+        SSHomes.play_slideshow = true
       SSHomes.slideshow()
       
     if $('.posts').length
@@ -50,9 +55,10 @@ window.SSHomes ?=
       next(this)
       event.preventDefault()
       
-    slideshow_interval = window.setInterval(->
-        next($('.slideshow a.next'))
-      , 5000)
+    if SSHomes.play_slideshow
+      slideshow_interval = window.setInterval(->
+          next($('.slideshow a.next'))
+        , 5000)
       
   posts: ->
     $('.posts a.prev').click (event) ->
