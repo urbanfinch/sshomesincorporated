@@ -32,16 +32,17 @@
         %a{:href => URI::escape("http://maps.google.com/maps?q=#{@map.center}")}
           %img{:src => URI::escape("http://maps.googleapis.com/maps/api/staticmap?center=#{@map.center}&zoom=#{@map.zoom}&size=380x380&markers=#{@map.center}&sensor=false")}
       %p
-        %a{:href => 'http://maps.google.com/maps?q=2320+S.+48th+Street,+Lincoln,+Nebraska'}
-          %span.bold 2320 S. 48th Street
+        %a{:href => 'http://maps.google.com/maps?q=2330+Muirfield+Place,+Columbus,+Nebraska'}
+          %span.bold 2330 Muirfield Place
         %br
-        %a{:href => 'http://maps.google.com/maps?q=2320+S.+48th+Street,+Lincoln,+Nebraska'}
-          %span.bold Lincoln, NE 68506
+        %a{:href => 'http://maps.google.com/maps?q=2330+Muirfield+Place,+Columbus,+Nebraska'}
+          %span.bold Columbus, NE 68601
         %br
         Phone: (402) 202-6527
         %br
         E-mail: 
         %a{:href => 'mailto:scott@sshomesincorporated.com'} scott@sshomesincorporated.com
+        %a{:href => 'mailto:billing@sshomesincorporated.com'} billing@sshomesincorporated.com
   .right
     %h2 Get In Touch
     = render :partial => 'shared/error', :locals => {:object => @contact}
