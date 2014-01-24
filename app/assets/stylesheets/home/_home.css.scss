@@ -131,6 +131,15 @@ section#home {
           padding: 20px;
           background-color: $gray;
           
+          div.login {
+            margin-top: 20px;
+            
+            table {
+              width: 10px;
+              border-collapse: separate;
+            }
+          }
+          
           div.post {
             display: none;
             margin-bottom: 10px;
@@ -170,30 +179,29 @@ section#home {
           div.post:first-child {
             display: block;
           }
-          
-          div.nav {
-            float: right;
+        }
+        
+        div.nav {
+          height: 30px;
+
+          a {
+            display: block;
+            float: left;
+            width: 30px;
             height: 30px;
-    
-            a {
-              display: block;
-              float: left;
-              width: 30px;
-              height: 30px;
-              line-height: 30px;
-              margin: 0px 1px;
-              font-size: 14px;
-              text-decoration: none;
-              text-align: center;
-              color: $white;
-              background-color: $blue;
-              font-family: 'BenchNine', sans-serif;
-            }
-            
-            a.more {
-              width: 144px;
-              margin-left: 0px;
-            }
+            line-height: 30px;
+            margin: 0px 1px;
+            font-size: 14px;
+            text-decoration: none;
+            text-align: center;
+            color: $white;
+            background-color: $blue;
+            font-family: 'BenchNine', sans-serif;
+          }
+        
+          a.more {
+            width: 144px;
+            margin-left: 0px;
           }
         }
       }

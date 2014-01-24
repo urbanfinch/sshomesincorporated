@@ -47,15 +47,11 @@
         %a{:href => 'mailto:billing@sshomesincorporated.com'} billing@sshomesincorporated.com
   .right
     %h2 Get In Touch
-    = render :partial => 'shared/error', :locals => {:object => @contact}
-    = form_for :contact, :url => contact_path do |f|
-      %div
-        = f.text_field :name, :placeholder => 'Name:', :required => true
-      %div
-        = f.email_field :email, :placeholder => 'Email:', :required => true
-      %div
-        = f.phone_field :phone, :placeholder => 'Phone:', :required => true
-      %div
-        = f.text_area :message, :rows => 12, :placeholder => 'Message:', :required => true
-      %div
-        = f.submit 'Send'
+    / Begin Contact Form
+    :javascript
+      window.jQuery || document.write('<script src="//code.jquery.com/jquery-1.8.0.min.js"><\/script>')
+    :javascript
+      var btDomain = "http://www.buildertrend.net";
+    %script{src: "http://www.buildertrend.net/leads/contactforms/js/btLeadsContactFormClient.js", type: "text/javascript"}
+    %iframe#btLeadsContactiFrame{src: "http://www.buildertrend.net/leads/contactforms/leadGenerator.aspx?builderID=3232&theme=a&url=http://www.sshomesincorporated.com/contact", style: "width:400px;height:400px;border:0;background:transparent;"}
+    / End Contact Form
