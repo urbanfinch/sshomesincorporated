@@ -44,25 +44,9 @@
               %a{:href => '#prev', :class => 'prev'} <
               %a{:href => '#next', :class => 'next'} >
           .login
-            / Begin Login Box
-            %table{align: "center", cellpadding: "2", cellspacing: "0", style: "FONT:12px arial;border:1px solid #333333;"}
-              %tbody
-                %tr
-                  %td.mainheader{align: "center", colspan: "2", style: "font:bold 11px arial;color:#ffffff;background:#004071;"} Client Login
-                %tr
-                  %td
-                    %iframe{frameborder: "0", marginheight: "0", marginwidth: "0", src: "http://www.buildertrend.net/loginFrame.aspx?builderID=3232&bgcolor=&fcolor=&uwidth=100&pwidth=100", style: "width:250px;height:90px;border:0px arial;"}
-                %tr
-                  %td.mainheader{align: "center", colspan: "2", style: "font:bold 11px arial;color:#ffffff;background:#004071 "}  
-                %tr
-                  %td{align: "center", bgcolor: "#FFFFFF", colspan: "2"}
-                    %a{href: "http://www.buildertrend.net/mobile/default.aspx", style: "font:10px arial;"}
-                      %img{align: "absmiddle", border: "0", src: "http://www.buildertrend.net/images/mobile.jpg"}/
-                      Login
-                    %br/
-                    %a{href: "http://www.builderTREND.com", target: "_blank"}
-                      %img{alt: "BuilderTREND Home Builder Software", border: "0", src: "http://www.buildertrend.net/images/btlogo.gif"}/
-            / End Login Box
+            %h6 Client Login
+            .login_wrapper
+              %iframe{src: "http://www.buildertrend.net/loginFrame.aspx?builderID=3232&bgcolor=&fcolor=&uwidth=100&pwidth=100"}
       .bottom
         .left
           - unless @bottom_left_blurb.nil?

@@ -134,9 +134,24 @@ section#home {
           div.login {
             margin-top: 20px;
             
-            table {
-              width: 10px;
-              border-collapse: separate;
+            div.login_wrapper {
+              width: 210px;
+              overflow: hidden;
+              
+              iframe {
+                width: 210px;
+                height: 100px;
+              }
+            }
+            
+            h6 {
+              font-size: 18px;
+              line-height: 24px;
+              text-align: center;
+              font-family: 'BenchNine', sans-serif;
+              text-transform: uppercase;
+              background-color: $light-blue;
+              color: $white;
             }
           }
           
