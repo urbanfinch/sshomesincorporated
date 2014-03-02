@@ -35,6 +35,7 @@ gem 'mongoid'
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 gem 'bourbon'
 gem 'uuid'
+gem 'tumblr_client'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

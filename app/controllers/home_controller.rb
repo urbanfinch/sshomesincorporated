@@ -9,6 +9,9 @@ class HomeController < ApplicationController
     @bottom_middle_blurb = Blurb.where(:identifier => 'home_bottom_middle').first
     @bottom_right_blurb = Blurb.where(:identifier => 'home_bottom_right').first
     
+    @client = Tumblr::Client.new
+    @tumblr_posts = client.posts("szegar.tumblr.com", :limit => 1)
+    
     respond_to do |format|
       format.html
     end
