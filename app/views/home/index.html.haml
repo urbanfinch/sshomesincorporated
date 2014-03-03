@@ -33,13 +33,14 @@
           - unless @posts.empty?
             .posts
               - @posts.each do |post|
-                .post{:'data-id' => post['id']}
-                  %h3.date
-                    %span.day= Date.parse(post['date']).day
-                    %span.month= Date.parse(post['date']).strftime("%b")
-                  %h3
-                    = link_to post['title'], post['post_url']
-                  %p= raw post['body']
+                - post['type'] == 'text'
+                  .post{:'data-id' => post['id']}
+                    %h3.date
+                      %span.day= Date.parse(post['date']).day
+                      %span.month= Date.parse(post['date']).strftime("%b")
+                    %h3
+                      = link_to post['title'], post['post_url']
+                    %p= raw post['body']
               .nav
                 %a{:href => 'http://blog.sshomesincorporated.com', :class => 'more'} Read More...
                 %a{:href => '#prev', :class => 'prev'} <
