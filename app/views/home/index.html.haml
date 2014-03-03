@@ -30,19 +30,20 @@
             %h3= @top_left_blurb.subtitle
             %div= raw @top_left_blurb.content
         .right
-          .posts
-            - @posts.each do |post|
-              .post{:'data-id' => post.id}
-                %h3.date
-                  %span.day= post.created_at.day
-                  %span.month= post.created_at.strftime("%b")
-                %h3
-                  = link_to post.title, post_path(post)
-                %p= post.summary
-            .nav
-              %a{:href => (post_path(@posts.first) if @posts.first), :class => 'more'} Read More...
-              %a{:href => '#prev', :class => 'prev'} <
-              %a{:href => '#next', :class => 'next'} >
+          - unless @posts.empty?
+            .posts
+              - @posts.each do |post|
+                .post{:'data-id' => post['id']}
+                  %h3.date
+                    %span.day= Date.parse(post['date']).day
+                    %span.month= Date.parse(post['date']).strftime("%b")
+                  %h3
+                    = link_to post['title'], post['post_url']
+                  %p= raw post['body']
+              .nav
+                %a{:href => 'http://blog.sshomesincorporated.com', :class => 'more'} Read More...
+                %a{:href => '#prev', :class => 'prev'} <
+                %a{:href => '#next', :class => 'next'} >
           .login
             %h6 Client Login
             .login_wrapper
