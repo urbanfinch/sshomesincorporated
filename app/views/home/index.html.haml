@@ -33,7 +33,7 @@
           - unless @posts.empty?
             .posts
               - @posts.each do |post|
-                - post['type'] == 'text'
+                - if post['type'] == 'text'
                   .post{:'data-id' => post['id']}
                     %h3.date
                       %span.day= Date.parse(post['date']).day
