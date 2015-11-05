@@ -5,7 +5,7 @@
         - @album.images.each do |image|
           %img{:src => image.image.url, :alt => image.id}
     .tag
-      %img{:src => '/assets/build_the_world.png', :alt => 'build_the_world'}
+      = image_tag('build_the_world.png', :alt => 'build_the_world')
     .nav
       %a{:href => '#prev', :class => 'prev'} <
       %a{:href => '#next', :class => 'next'} >
