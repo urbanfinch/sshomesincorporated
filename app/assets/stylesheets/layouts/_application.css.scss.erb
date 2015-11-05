@@ -5,7 +5,7 @@ html, body {
 body {
   background-color: $white;
   color: $blue;
-  background-image: url('/assets/background.png');
+  background-image: url(<%= asset_path('background.png') %>);
   background-repeat: no-repeat;
   background-size: 100% 700px;
   font-family: Arial, sans-serif;
@@ -14,19 +14,19 @@ body {
 
 header {
   height: 190px;
-  
+
   div.logo {
     width: 250px;
     height: 190px;
     float: left;
-    
+
     h1 {
       width: 250px;
       height: 190px;
-      background-image: url('/assets/logo.png');
+      background-image: url(<%= asset_path('logo.png') %>);
       background-repeat: no-repeat;
       background-position: 11px 0px;
-      
+
       a {
         display: block;
         width: 250px;
@@ -36,12 +36,12 @@ header {
       }
     }
   }
-  
+
   div.nav {
     float: left;
     width: 600px;
     margin-top: 140px;
-    
+
     a {
       display: block;
       float: left;
@@ -52,27 +52,27 @@ header {
       font-size: 28px;
       color: $blue;
     }
-    
+
     a:last-child {
       margin-right: 0px;
     }
-    
+
     a:hover, a.selected {
       color: $light-blue;
     }
   }
-  
+
   div.social {
     float: left;
     width: 135px;
     margin-top: 140px;
-    
+
     a {
       display: block;
       float: right;
       margin-left: 5px;
       text-decoration: none;
-      
+
       img {
         display: block;
         width: 28px;
@@ -81,7 +81,7 @@ header {
         background-color: $light-blue;
       }
     }
-    
+
     a:last-child {
       margin-left: 0px;
     }
@@ -95,31 +95,31 @@ footer {
   text-transform: uppercase;
   background-color: $blue;
   color: $white;
-  
+
   span {
     display: block;
     padding: 10px 0px;
-    
+
     a {
       color: $white;
       text-decoration: none;
     }
   }
-  
+
   div.left {
     float: left;
     width: 50%;
   }
-  
+
   div.right {
     float: left;
     width: 50%;
     text-align: right;
-    
+
     span:first-child {
       color: $gray;
     }
-    
+
     span:last-child {
       font-size: 40px;
       padding: 0px;

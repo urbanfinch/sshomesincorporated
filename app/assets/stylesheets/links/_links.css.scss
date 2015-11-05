@@ -2,21 +2,21 @@ section#links {
   @include clearfix;
   margin-top: 80px;
   margin-bottom: 100px;
-  
+
   h2 {
     margin-bottom: 20px;
   }
-  
+
   div.links {
     div.row {
       @include clearfix;
       margin-bottom: 20px;
-    
+
       div.link {
         float: left;
         width: 220px;
         height: 90px;
-      
+
         a {
           display: block;
           width: 218px;
@@ -30,17 +30,17 @@ section#links {
           border: 1px $gray solid;
           color: $light-blue;
         }
-      
+
         a:hover {
           color: $blue;
           background-color: $light-blue;
         }
       }
-    
+
       div.link:nth-child(2) {
         margin: 0px 35px;
       }
-      
+
       div.link:nth-child(3) {
         margin-right: 35px;
       }

@@ -2,22 +2,22 @@ section#service {
   @include clearfix;
   margin-top: 80px;
   margin-bottom: 100px;
-  
+
   h2, h3 {
     margin-bottom: 20px;
   }
-  
+
   div.top {
     @include clearfix;
     margin-bottom: 20px;
-    
+
     ul {
       li {
         min-height: 60px;
         margin-bottom: 20px;
         padding: 0px;
         background-image: none;
-        
+
         div.indicator {
           display: block;
           float: left;
@@ -25,7 +25,7 @@ section#service {
           height: 60px;
           margin-right: 20px;
           background-color: $light-blue;
-          
+
           span.letter {
             display: block;
             margin-top: 10px;
@@ -33,7 +33,7 @@ section#service {
             text-align: center;
             color: $white;
           }
-          
+
           span.title {
             display: block;
             color: $white;
@@ -41,27 +41,27 @@ section#service {
           }
         }
       }
-      
+
       li:last-child {
         margin-bottom: 0px;
       }
     }
   }
-  
+
   div.bottom {
     @include clearfix;
   }
-  
+
   div.left {
     float: left;
     width: 625px;
     margin-right: 40px;
   }
-  
+
   div.right {
     float: left;
     width: 300px;
-    
+
     img {
       width: 280px;
       margin-bottom: 20px;

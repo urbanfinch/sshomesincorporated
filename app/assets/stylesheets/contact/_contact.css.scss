@@ -2,25 +2,25 @@ section#contact {
   @include clearfix;
   margin-top: 80px;
   margin-bottom: 100px;
-  
+
   h2 {
     margin-bottom: 20px;
   }
-  
+
   div.top {
     margin-bottom: 20px;
   }
-  
+
   div.left {
     float: left;
     width: 400px;
-    
+
     div.our_team {
       margin-bottom: 20px;
-      
+
       div.employee {
         margin-bottom: 20px;
-        
+
         p {
           font-weight: bold;
           font-size: 16px;
@@ -28,23 +28,23 @@ section#contact {
           margin-bottom: 10px;
           color: $light-blue;
         }
-        
+
         p:first-line {
           color: $blue;
         }
-        
+
         dl {
           dt {
             float: left;
             font-weight: bold;
             line-height: 16px;
           }
-          
+
           dt:after {
             content: ':';
             padding-right: 10px;
           }
-          
+
           dd {
             display: block;
             line-height: 16px;
@@ -52,7 +52,7 @@ section#contact {
         }
       }
     }
-    
+
     div.contact_info {
       img {
         width: 380px;
@@ -60,16 +60,16 @@ section#contact {
       }
     }
   }
-  
+
   div.right {
     float: left;
     width: 565px;
     margin-left: 20px;
-    
+
     p {
       margin-bottom: 20px;
     }
-    
+
     ul {
       margin-bottom: 20px;
     }

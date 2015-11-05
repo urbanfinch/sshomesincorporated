@@ -1,5 +1,5 @@
 section#home {
-  
+
   h2.slogan {
     height: 50px;
     line-height: 50px;
@@ -8,25 +8,25 @@ section#home {
     background-color: $gray;
     font-size: 22px;
   }
-  
+
   div.container {
     @include clearfix;
     width: 985px;
     margin-top: 20px;
     margin-bottom: 100px;
-    
+
     div.sidebar {
       float: left;
       width: 140px;
       padding: 20px;
       background-color: $light-blue;
-      
+
       h3 {
         margin-bottom: 20px;
         font-size: 34px;
         color: $white;
       }
-      
+
       h4 {
         margin-bottom: 20px;
         font-size: 16px;
@@ -34,13 +34,13 @@ section#home {
         color: $white;
         font-family: 'BenchNine', sans-serif;
       }
-      
+
       div.testimonials {
         div.nav {
           float: right;
           height: 30px;
           margin-top: 20px;
-  
+
           a {
             display: block;
             float: left;
@@ -55,27 +55,27 @@ section#home {
             background-color: $blue;
             font-family: 'BenchNine', sans-serif;
           }
-          
+
           a.more {
             width: 144px;
             margin-left: 0px;
           }
         }
-        
+
         div.testimonial {
           display: none;
-        
+
           q {
             margin-bottom: 10px;
             color: $gray;
             font-style: italic;
             line-height: 16px;
           }
-      
+
           q:before, q:after {
             content: '"';
           }
-          
+
           small {
             display: block;
             margin-top: 10px;
@@ -83,71 +83,71 @@ section#home {
             text-align: right;
             color: $blue;
           }
-      
+
           small:before {
             content: '- ';
           }
-      
+
           small:last-child {
             margin-bottom: 0px;
           }
         }
-      
+
         div.testimonial:first-child {
           display: block;
         }
       }
     }
-    
+
     div.content {
       float: left;
       width: 790px;
       margin-left: 15px;
-      
+
       div.top {
         @include clearfix;
         margin-bottom: 20px;
-        
+
         h2 {
           margin-bottom: 20px;
         }
-        
+
         h3 {
           margin-bottom: 10px;
           color: $light-blue;
         }
-        
+
         div.left, div.right {
           float: left;
         }
-        
+
         div.left {
           width: 500px;
           padding: 20px;
         }
-        
+
         div.right {
           width: 210px;
           padding: 20px;
           background-color: $gray;
-          
+
           div.houzz {
             margin-top: 20px;
           }
-          
+
           div.login {
             margin-top: 20px;
-            
+
             div.login_wrapper {
               width: 210px;
               overflow: hidden;
-              
+
               iframe {
                 width: 210px;
                 height: 100px;
               }
             }
-            
+
             h6 {
               font-size: 18px;
               line-height: 24px;
@@ -158,11 +158,11 @@ section#home {
               color: $white;
             }
           }
-          
+
           div.post {
             display: none;
             margin-bottom: 10px;
-            
+
             h3.date {
               float: left;
               width: 60px;
@@ -171,35 +171,35 @@ section#home {
               background-color: $light-blue;
               color: $white;
               text-align: center;
-            
+
               span.day {
                 display: block;
                 font-size: 32px;
                 padding-top: 4px;
               }
-            
+
               span.month {
                 display: block;
               }
             }
-            
+
             h3 {
               a {
                 text-decoration: none;
                 color: $light-blue;
               }
-              
+
               a:hover {
                 color: $blue;
               }
             }
           }
-          
+
           div.post:first-child {
             display: block;
           }
         }
-        
+
         div.nav {
           clear: both;
           height: 30px;
@@ -218,17 +218,17 @@ section#home {
             background-color: $blue;
             font-family: 'BenchNine', sans-serif;
           }
-        
+
           a.more {
             width: 144px;
             margin-left: 0px;
           }
         }
       }
-      
+
       div.bottom {
         @include clearfix;
-        
+
         a.read_more {
           display: block;
           width: 50px;
@@ -241,30 +241,30 @@ section#home {
           text-align: center;
           color: $white;
         }
-  
+
         a.read_more:hover {
           background-color: $light-blue;
         }
-        
+
         h2 {
           margin-bottom: 20px;
         }
-        
+
         h3 {
           margin-bottom: 15px;
           color: $light-blue;
         }
-        
+
         div.left, div.middle, div.right {
           float: left;
           width: 210px;
           padding: 20px;
         }
-        
+
         div.middle {
           margin: 0px 20px;
         }
-        
+
         img {
           display: block;
           width: 190px;
