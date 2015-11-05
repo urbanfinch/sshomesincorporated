@@ -1,5 +1,5 @@
-Sshomesincorporated::Application.routes.draw do
-  
+Rails.application.routes.draw do
+
   get 'home' => 'home#index'
   get 'about' => 'about#index'
   get 'service' => 'service#index'
@@ -8,12 +8,12 @@ Sshomesincorporated::Application.routes.draw do
   get 'links' => 'links#index'
   get 'contact' => 'contact#index'
   post 'contact' => 'contact#create'
-  
+
   resources :posts, :only => [:show]
- 
+
   root :to => 'home#index'
-  match '*path', :to => 'home#index'
-  
+  #match '*path', :to => 'home#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
