@@ -1,27 +1,27 @@
 window.SSHomes ?=
-  
+
   play_slideshow: false
-  
+
   init: ->
     $(document).ready ->
       SSHomes.bootstrap()
-          
+
   bootstrap: ->
     #unless $("body").data("controller") is "home"
     #  $("body").css "background-image", "url('/assets/background_clipped.png')"
     #  $("body").css "background-size", "100% 210px"
-      
+
     if $('.slideshow').length
       if $('section#home').length
         SSHomes.play_slideshow = true
       SSHomes.slideshow()
-      
+
     if $('.posts').length
       SSHomes.posts()
-      
+
     if $('.testimonials').length
       SSHomes.testimonials()
-      
+
   slideshow: ->
     prev = (element) ->
       slides = $(element).parent().siblings('.slides')
@@ -34,7 +34,7 @@ window.SSHomes ?=
       else
         $(current_slide).fadeOut 400, ->
           $($('img', slides).get(slides_count - 1)).fadeIn()
-          
+
     next = (element) ->
       slides = $(element).parent().siblings('.slides')
       slides_count = $('img', slides).length
@@ -46,20 +46,20 @@ window.SSHomes ?=
       else
         $(current_slide).fadeOut 400, ->
           $($('img', slides).get(0)).fadeIn()
-          
+
     $('.slideshow a.prev').click (event) ->
       prev(this)
       event.preventDefault()
-    
+
     $('.slideshow a.next').click (event) ->
       next(this)
       event.preventDefault()
-      
+
     if SSHomes.play_slideshow
       slideshow_interval = window.setInterval(->
           next($('.slideshow a.next'))
         , 5000)
-      
+
   posts: ->
     $('.posts a.prev').click (event) ->
       posts = $(this).parent().siblings('.post')
@@ -76,9 +76,9 @@ window.SSHomes ?=
           new_post = $(posts).get(posts_count - 1)
           $('.posts a.more').attr('href', '/posts/' + $(new_post).data('id'))
           $(new_post).fadeIn()
-          
+
       event.preventDefault()
-    
+
     $('.posts a.next').click (event) ->
       posts = $(this).parent().siblings('.post')
       posts_count = $(posts).length
@@ -94,9 +94,9 @@ window.SSHomes ?=
           new_post = $(posts).get(0)
           $('.posts a.more').attr('href', '/posts/' + $(new_post).data('id'))
           $(new_post).fadeIn()
-      
+
       event.preventDefault()
-      
+
   testimonials: ->
     $('.testimonials a.prev').click (event) ->
       testimonials = $(this).parent().siblings('.testimonial')
@@ -111,9 +111,9 @@ window.SSHomes ?=
         $(current_testimonial).fadeOut 400, ->
           new_testimonial = $(testimonials).get(testimonials_count - 1)
           $(new_testimonial).fadeIn()
-          
+
       event.preventDefault()
-    
+
     $('.testimonials a.next').click (event) ->
       testimonials= $(this).parent().siblings('.testimonial')
       testimonials_count = $(testimonials).length
@@ -127,7 +127,7 @@ window.SSHomes ?=
         $(current_testimonial).fadeOut 400, ->
           new_testimonial = $(testimonials).get(0)
           $(new_testimonial).fadeIn()
-      
+
       event.preventDefault()
-    
+
 SSHomes.init()
